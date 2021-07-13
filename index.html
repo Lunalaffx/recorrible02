@@ -14,19 +14,24 @@
     <a-assets>
         <a-asset-items id="recorrible" src="scene_gltffinal.gltf"></a-asset-items>
         <a-asset-items id="mona" src="mona2.gltf"></a-asset-items>
-        
+        <audio id="body" src="body.mp3" preload="auto"></audio>
     </a-assets>
   
     
     <a-entity gltf-model="scene_gltffinal.gltf" position="0 0.54607 0 "></a-entity>
     <a-entity gltf-model="mona2.gltf" position="-0.19159 0.97615 -0.33044" rotation="172.47 10 -13" scale="0.4 0.4 0.6"></a-entity>
-
+     <a-entity sound="src: #body"></a-entity>
     <a-entity camera="" look-controls="" wasd-controls="acceleration: 8; fly: true" true="" rotation="" data-aframe-inspector-original-camera="" position="2.74267240195587 0.87665 0.17023668354258864"></a-entity> 
        <a-entity light="type: point; intensity:1.5" position="0 3.80102 5.49395"></a-entity>
     <a-entity light="type: point" position="6.45231 1.491 -5.49116"></a-entity>
     <a-entity light="type: point" position="-3.453 0.821 -6.48225"></a-entity>
  </a-scene>
-
+<script>
+     var entity = document.querySelector('[#body]');
+            entity.components.sound.stopSound();
+            entity.components.sound.playSound();
+ </script>
+  <button onclick="myFunction()">Click me</button> ?
  
 </body>
 </html>
