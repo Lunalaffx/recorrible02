@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Recorrible 2 antiguo</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    
+</head>
+<body>
+    
+ <a-scene inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="" device-orientation-permission-ui="" background="color: #200431" light="">
+    <a-sound src="src: url(xyz.mp3)" autoplay="true" position="-0.8827 2 4.24634" sound=""></a-sound>
+    <a-assets>
+        <a-asset-items id="recorrible" src="scene_gltffinal.gltf"></a-asset-items>
+        <a-asset-items id="mona" src="mona2.gltf"></a-asset-items>
+        <img id="sky" src="hdri/whipple_creek_regional_park_04_1k_1.jpg">
+    </a-assets>
+    <a-sky src="#sky" material="side:  back;  shader:  flat;  npot:  true;  src:  [object HTMLImageElement];  offset:  [object Object];  repeat:  [object Object];  transparent:  true;  visible:  false;  wireframe:  true"></a-sky>
+    
+    <a-entity gltf-model="scene_gltffinal.gltf" position="0 0.54607 0 "></a-entity>
+    <a-entity gltf-model="mona2.gltf" position="-0.19159 0.97615 -0.33044" rotation="172.47 10 -13" scale="0.4 0.4 0.6"></a-entity>
+
+    <a-entity camera="" look-controls="" wasd-controls="acceleration: 8; fly: true" true="" rotation="" data-aframe-inspector-original-camera="" position="2.74267240195587 0.87665 0.17023668354258864"></a-entity> 
+       <a-entity light="type: point; intensity:1.5" position="0 3.80102 5.49395"></a-entity>
+    <a-entity light="type: point" position="6.45231 1.491 -5.49116"></a-entity>
+    <a-entity light="type: point" position="-3.453 0.821 -6.48225"></a-entity>
+ </a-scene>
+
+ 
+</body>
+</html>
